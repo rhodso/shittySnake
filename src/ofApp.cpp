@@ -59,6 +59,9 @@ void ofApp::handleKeypresses(){
     //Pause key (Enter)
     if(keys[13]){ grid::setDoUpdate(!grid::getDoUpdate()); }
 
+    //I key (Toggle debug)
+    if(keys[105]){ debugger::setDebug(!debugger::getDebug()); }
+
     //Directional keys: W, A, S, D
     if(grid::getDoUpdate()){
         switch(s.getDirection()){
@@ -97,10 +100,9 @@ void ofApp::handleKeypresses(){
     keys[13] = false;
     keys[97] = false;
     keys[100] = false;
+    keys[105] = false;
     keys[115] = false;
-    keys[117] = false;
     keys[119] = false;
-
 }
 
 void ofApp::keyPressed(int key){

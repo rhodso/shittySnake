@@ -12,7 +12,9 @@ void game::setEatFlag(bool _state){ eatFlag = _state; }
 //Other methods
 void game::end(){
     debugger::log("Snake is kill. This is so sad");
-    grid::setDoUpdate(false);
+
+    //I can't think of anything better, so just kill the app when the snake dies
+    ofExit(0);
 }
 void game::drawFood(){ f.draw(); }
 void game::checkFood(){
